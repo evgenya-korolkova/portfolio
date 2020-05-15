@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+*::selection {
+    background-color: #fbdc4d;
+}
+
+a, a:hover {
+    text-decoration: none;
+
+    transition: 0.5s;
+}
+
+a {
+    color: inherit;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;    
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+button, input{
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+// background-color: #ccc;
+
+    padding: 0 15px;
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        padding: 0 30px;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        padding: 0;
+    }
+}
+
+.none {
+    display: none;
+}
+
+.title-3 {
+    font-size: 40px;
+    font-family: "Mplus 1p ExtraBold";
+    line-height: 1.2;
+    text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 1);
+}
+
+.button-link {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 0 40px;
+    border-radius: 30px;
+}
+
+.button-link_yellow {
+    line-height: 64px;
+    color: #000;
+    background-color: #fbdc4d;
+
+    &:hover {
+        background-color: #ffd200;
+    }
+
+    &:active {
+        background-color: #e1bc10;
+    }
+}
+
+.button-link_white {
+    line-height: 56px;
+    color: #464646;
+    border: 4px solid #464646;
+    // border-radius: 32px;
+
+    &:hover {
+        color: #797979;
+        border: 4px solid #797979;
+    }
+
+    &:active {
+        color: #181818;
+        border: 4px solid #181818;
+    }
+}
+
+.button-link_wrapper {
+    display: flex;
+}
+

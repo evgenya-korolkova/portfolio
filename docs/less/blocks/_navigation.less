@@ -1,0 +1,119 @@
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 auto;
+    margin-bottom: 75px;
+
+    padding-top: 75px;
+    padding-bottom: 75px;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    // background-color: grey;
+}
+
+.nav_logo {
+    position: relative;
+    z-index: 2;
+
+    font-size: 42px;
+    font-family: "Mplus 1p Black";
+    // font-weight: 900;
+    // color:#000;
+
+    line-height: 1.2;
+}
+
+.nav_logo::after {
+    position: absolute;
+    z-index: -1;
+
+    content: "";
+    height: 10px;
+
+    background-color: #fbdc4d;
+    bottom: 5px;
+    left: -5px;
+    right: -5px;
+}
+
+.nav_list {
+    display: flex;
+    font-size: 20px;
+    font-family: "Mplus 1p Bold";
+    font-weight: bold;
+    color: #000;
+    line-height: 1.2;
+
+    li {
+        margin-right: 75px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.nav_list-link {
+    position: relative;
+    z-index: 2;
+
+    &:focus {
+        outline-offset: -4px;
+        outline: 3px dotted #ea736d;
+        transition: unset;
+    }
+}
+
+.nav_list-link::after {
+    position: absolute;
+    z-index: -1;
+
+    content: "";
+    height: 6px;
+    width: 0;
+
+    background-color: #fbdc4d;
+    bottom: 1px;
+    left: 0;
+
+    transition: 0.5s;
+}
+
+.nav_list-link:hover::after, .nav_list-link:active::after, .nav_list-link_active::after {
+    width: 100%;
+}
+
+.nav_icons {
+    display: flex;
+
+    font-size: 30px;
+}
+
+.nav_icons-item {
+    margin-right: 20px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.nav_icons-link_linkedin {
+    &:hover, &:active {
+        color: #0077b5;
+    }
+}
+
+.nav_icons-link_github {
+    &:hover, &:active {
+        color: #6cc644;
+    }
+}
+
+.nav_icons-link_vk {
+    &:hover, &:active {
+        color: #45668e;
+    }
+}

@@ -1,0 +1,361 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'M PLUS 1p', sans-serif;
+}
+*::selection {
+  background-color: #fbdc4d;
+}
+a,
+a:hover {
+  text-decoration: none;
+  transition: 0.5s;
+}
+a {
+  color: inherit;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+button,
+input {
+  outline: none;
+}
+button {
+  cursor: pointer;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+@media (min-width: 768px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    padding: 0;
+  }
+}
+.none {
+  display: none;
+}
+.title-3 {
+  font-size: 40px;
+  font-family: "Mplus 1p ExtraBold";
+  line-height: 1.2;
+  text-shadow: 0px 3px 42.32px #ffffff;
+}
+.button-link {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 0 40px;
+  border-radius: 30px;
+}
+.button-link_yellow {
+  line-height: 64px;
+  color: #000;
+  background-color: #fbdc4d;
+}
+.button-link_yellow:hover {
+  background-color: #ffd200;
+}
+.button-link_yellow:active {
+  background-color: #e1bc10;
+}
+.button-link_white {
+  line-height: 56px;
+  color: #464646;
+  border: 4px solid #464646;
+}
+.button-link_white:hover {
+  color: #797979;
+  border: 4px solid #797979;
+}
+.button-link_white:active {
+  color: #181818;
+  border: 4px solid #181818;
+}
+.button-link_wrapper {
+  display: flex;
+}
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 75px;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.nav_logo {
+  position: relative;
+  z-index: 2;
+  font-size: 42px;
+  font-family: "Mplus 1p Black";
+  line-height: 1.2;
+}
+.nav_logo::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  height: 10px;
+  background-color: #fbdc4d;
+  bottom: 5px;
+  left: -5px;
+  right: -5px;
+}
+.nav_list {
+  display: flex;
+  font-size: 20px;
+  font-family: "Mplus 1p Bold";
+  font-weight: bold;
+  color: #000;
+  line-height: 1.2;
+}
+.nav_list li {
+  margin-right: 75px;
+}
+.nav_list li:last-child {
+  margin-right: 0;
+}
+.nav_list-link {
+  position: relative;
+  z-index: 2;
+}
+.nav_list-link:focus {
+  outline-offset: -4px;
+  outline: 3px dotted #ea736d;
+  transition: unset;
+}
+.nav_list-link::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  height: 6px;
+  width: 0;
+  background-color: #fbdc4d;
+  bottom: 1px;
+  left: 0;
+  transition: 0.5s;
+}
+.nav_list-link:hover::after,
+.nav_list-link:active::after,
+.nav_list-link_active::after {
+  width: 100%;
+}
+.nav_icons {
+  display: flex;
+  font-size: 30px;
+}
+.nav_icons-item {
+  margin-right: 20px;
+}
+.nav_icons-item:last-child {
+  margin-right: 0;
+}
+.nav_icons-link_linkedin:hover,
+.nav_icons-link_linkedin:active {
+  color: #0077b5;
+}
+.nav_icons-link_github:hover,
+.nav_icons-link_github:active {
+  color: #6cc644;
+}
+.nav_icons-link_vk:hover,
+.nav_icons-link_vk:active {
+  color: #45668e;
+}
+.header {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-bottom: 238px;
+  color: #000;
+  background-image: url("../img/header/line.jpg");
+  background-repeat: repeat-y;
+  background-size: auto;
+  background-position: center;
+}
+.header-info {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+.info-desc {
+  width: 60%;
+}
+.info-photo {
+  position: relative;
+  z-index: 2;
+  width: 40%;
+}
+.info-photo img {
+  max-height: 410px;
+}
+.info-desc_title {
+  margin-bottom: 30px;
+}
+.info-desc_fi {
+  position: relative;
+  z-index: 2;
+  font-size: 90px;
+  font-family: "Mplus 1p ExtraBold";
+  line-height: 1.2;
+}
+.info-desc_fi::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  height: 12px;
+  background-color: #fbdc4d;
+  bottom: 23px;
+  left: -5px;
+  right: -5px;
+}
+.info-desc_text {
+  width: 500px;
+  margin-bottom: 30px;
+}
+.info-desc_text_p {
+  font-size: 24px;
+  font-family: "Mplus 1p Medium";
+  line-height: 1.5;
+  color: #393f47;
+  text-shadow: 0px 3px 42.32px #ffffff;
+  margin-bottom: 10px;
+}
+.info-desc_text_p:last-child {
+  margin-bottom: 0;
+}
+.info-desc_intro {
+  margin-right: 20px;
+}
+.info-photo::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 30%;
+  top: 30%;
+  background-image: linear-gradient(180deg, rgba(244, 248, 249, 0), #f4f8f9);
+  opacity: 0.5;
+}
+.header-image {
+  margin-top: -130px;
+}
+.header-image img {
+  max-width: unset;
+  transform: translateX(-230px);
+}
+.header-info-2 {
+  display: flex;
+}
+.info-can {
+  width: 60%;
+}
+.info-contacts {
+  width: 40%;
+  padding-left: 97px;
+}
+.info-can_title {
+  margin-bottom: 30px;
+}
+.info-can_list {
+  font-size: 24px;
+  line-height: 1.2;
+  text-shadow: 0px 3px 42.32px #ffffff;
+  margin-bottom: 35px;
+}
+.info-can_list-item {
+  position: relative;
+  z-index: 2;
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+.info-can_list-item:last-child {
+  margin-bottom: 0;
+}
+.info-can_list-item::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  width: 24px;
+  height: 1px;
+  left: 0;
+  top: 50%;
+  background-color: #000;
+}
+.info-contacts_title {
+  margin-bottom: 30px;
+}
+.info-contacts_list {
+  display: flex;
+  font-size: 50px;
+}
+.info-contacts_list-item {
+  margin-right: 30px;
+}
+.info-contacts_list-item:last-child {
+  margin-right: 0;
+}
+.fa-stack {
+  font-size: 0.5em;
+  width: 2em;
+  vertical-align: -15%;
+}
+.color-github {
+  color: #212121;
+}
+.color-telegram {
+  color: #039be5;
+}
+.color-vk {
+  color: #4d76a1;
+}
+.color-facebook {
+  color: #3b5998;
+}
+.info-contacts_email {
+  font-size: 24px;
+  line-height: 1.2;
+  border-bottom: 1px solid #000;
+  text-shadow: 0px 3px 42.32px #ffffff;
+}
+.info-contacts_email:hover {
+  color: #039be5;
+  border-bottom: 1px solid #039be5;
+}
+.info-contacts_email:active {
+  color: #ea655f;
+  border-bottom: 1px solid #ea655f;
+}
+/*# sourceMappingURL=main.css.map */

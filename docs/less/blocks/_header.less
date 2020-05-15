@@ -1,0 +1,225 @@
+.header {
+    max-width: 1600px;  
+    margin: 0 auto; 
+    padding-bottom: 238px; 
+
+    color: #000;
+
+    background-image: url("../img/header/line.jpg");
+    background-repeat: repeat-y;
+    background-size: auto;
+    background-position: center;
+}
+
+.header-info {
+    position: relative; // чтобы не наезжала 
+    z-index: 2;         // картинка с ноутбуком
+
+    display: flex;
+    align-items: center;
+}
+
+.info-desc {
+    width: 60%;
+}
+
+.info-photo {
+    position: relative;
+    z-index: 2;
+
+    width: 40%;
+
+    img {
+        max-height: 410px;
+    }
+}
+
+.info-desc_title {
+    margin-bottom: 30px;
+}
+
+.info-desc_fi {
+    position: relative;
+    z-index: 2;
+    font-size: 90px;
+    // font-weight: 800;
+    font-family: "Mplus 1p ExtraBold";
+    line-height: 1.2;
+}
+
+.info-desc_fi::after {
+    position: absolute;
+    z-index: -1;
+
+    content: "";
+    height: 12px;
+
+    background-color: #fbdc4d;
+    bottom: 23px;
+    left: -5px;
+    right: -5px;
+}
+
+.info-desc_text {
+    width: 500px;
+
+    margin-bottom: 30px;
+}
+
+.info-desc_text_p {
+    font-size: 24px;
+    // font-weight: 500;
+    font-family: "Mplus 1p Medium";
+    line-height: 1.5;
+    color: #393f47;
+    text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 1);
+
+    margin-bottom: 10px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.info-desc_intro {
+    margin-right: 20px;
+}
+
+.info-photo::after {
+    position: absolute;
+    z-index: -1;
+
+    content: "";
+
+    width: 100%;
+    height: 100%;
+
+    left: 30%;
+    top: 30%;
+
+    background-image: linear-gradient(180deg, rgba(244, 248, 249, 0), rgba(244, 248, 249, 1));
+    // background-image: linear-gradient(180deg, rgba(244, 248, 249, 0), rgba(61, 163, 189, 1));
+    opacity: 0.5;
+}
+
+.header-image {
+    margin-top: -130px;
+
+    img {
+        max-width: unset;
+        transform: translateX(-230px);
+    }
+}
+
+.header-info-2 {
+    display: flex;
+}
+
+.info-can {
+    width: 60%;
+}
+
+.info-contacts {
+    width: 40%;
+
+    padding-left: 97px;
+}
+
+.info-can_title {
+    margin-bottom: 30px;
+}
+
+.info-can_list {
+    font-size: 24px;
+    line-height: 1.2;
+    text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 1);
+
+    margin-bottom: 35px;
+}
+
+.info-can_list-item {
+    position: relative;
+    z-index: 2;
+
+    padding-left: 30px;
+
+    margin-bottom: 10px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.info-can_list-item::after {
+    position: absolute;
+    z-index: -1;
+
+    content: "";
+
+    width: 24px;
+    height: 1px;
+
+    left: 0;
+    top: 50%;
+
+    background-color: #000;
+}
+
+.info-contacts_title {
+    margin-bottom: 30px;
+}
+
+.info-contacts_list {
+    display: flex;
+
+    font-size: 50px;
+}
+
+.info-contacts_list-item {
+    margin-right: 30px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.fa-stack {
+    font-size: 0.5em;
+    width: 2em;
+    vertical-align: -15%;
+}
+
+.color-github {
+    color: #212121;
+}
+
+.color-telegram {
+    color: #039be5;
+}
+
+.color-vk {
+    color: #4d76a1;
+}
+
+.color-facebook {
+    color: #3b5998;
+}
+
+.info-contacts_email {
+    font-size: 24px;
+    line-height: 1.2;
+    // color: #000;
+    border-bottom: 1px solid #000;
+    text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 1);
+
+    &:hover {
+        color: #039be5;
+        border-bottom: 1px solid #039be5;
+    }
+
+    &:active {
+        color: #ea655f;
+        border-bottom: 1px solid #ea655f;
+    }
+}
+
