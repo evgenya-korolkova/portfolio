@@ -19,7 +19,7 @@
 
         <nav class="header-nav">
 
-            <a href="#" class="nav_logo">EK</a>
+            <a href="./index.html" class="nav_logo">EK</a>
 
              <ul class="nav_list">
                 <li class="nav_list-item"><a href="#" class="nav_list-link nav_list-link_active">Главная</a></li>
@@ -51,7 +51,7 @@
                     <h1 class="info-desc_title"><span class="info-desc_fi">Евгения</span><br><span class="info-desc_fi">Королькова</span></h1>
 
                     <div class="info-desc_text">
-                        <p class="info-desc_text_p">Верстальщик сайтов, веб-разработчик. Оперативная верстка. Работаю с соблюдением сроков и выполнением ТЗ. </p>
+                        <p class="info-desc_text_p">Верстальщик сайтов, веб-разработчик. Оперативная&nbsp;верстка. Работаю с&nbsp;соблюдением сроков и выполнением ТЗ. </p>
                     </div>
 
                     <div class="button-link_wrapper">
@@ -70,11 +70,14 @@
 
             </div>
             <!-- // header-info -->
+        </div>
 
-            <div class="header-image">
-                <img src="./img/header/bg_03.jpg" alt="notebook">
-            </div>
 
+        <div class="header-image">
+            <img src="./img/header/bg_03.jpg" alt="notebook">
+        </div>
+
+        <div class="container">
             <div class="header-info-2" id="can">
 
                 <div class="info-can">
@@ -88,7 +91,7 @@
                         <li class="info-can_list-item">с Bootstrap и без него.</li>
                     </ul>
 
-                    <a href="#" class="info-can_works button-link button-link_white">Смотреть работы</a>
+                    <a href="#portfolio" class="info-can_works button-link button-link_white">Смотреть работы</a>
 
                 </div>
 
@@ -112,12 +115,139 @@
                         </a></li>
                     </ul>
 
-                    <a href="#" class="info-contacts_email">evgenyakorolkova@mail.ru</a>
+                    <a href="mailto:evgenyakorolkova@mail.ru" class="info-contacts_email">evgenyakorolkova@mail.ru</a>
 
                 </div>
             </div>
         </div>
     </header>
+
+    <main>
+        <section class="portfolio" id="portfolio">
+            <div class="container">
+
+                <div class="portfolio-title title-2"><span class="underline">Портфолио</span></div>
+
+                <div class="portfolio-filter">
+                    <button class="portfolio-filter_button control-active" data-filter="all">Все работы</button>
+                    <button class="portfolio-filter_button" data-filter=".boots">Bootstrap</button>
+                    <button class="portfolio-filter_button" data-filter=".wp">WordPress</button>
+                    <button class="portfolio-filter_button" data-filter=".frontend">Frontend</button>
+                </div>
+
+                <div class="portfolio-projects" id="portfolio-projects">
+                    <div class="project-card project-card_big mix boots">
+                        <a href="#" class="project-card_img">
+                            <img src="./img/portfolio/forest-travel.jpg" alt="Форест тревел">
+                            <button class="project-card_button">Смотреть проект</button>
+                        </a>
+                        <h4 class="project-card_title title title-4"><a href="#" class="project-card_link">Верстка &ldquo;Форест тревел&ldquo;</a></h4>
+                        <p class="project-card_desc">Верстка многостраничного сайта.</p>
+                    </div>
+
+                    <div class="project-card project-card_big mix wp">
+                        <a href="#" class="project-card_img">
+                            <img src="./img/portfolio/unit.jpg" alt="ЮНИТ">
+                            <button class="project-card_button">Смотреть проект</button>
+                        </a>
+                        <h4 class="project-card_title title title-4"><a href="#" class="project-card_link">Верстка &ldquo;ЮНИТ&ldquo;</a></h4>
+                        <p class="project-card_desc">Верстка лендинга.</p>
+                    </div>
+
+                    <div class="project-card mix frontend">
+                        <a href="#" class="project-card_img">
+                            <img src="./img/portfolio/avto-01.jpg" alt="Мир Авто">
+                            <button class="project-card_button">Смотреть проект</button>
+                        </a>
+                        <h4 class="project-card_title title title-4"><a href="#" class="project-card_link">Верстка &ldquo;Мир Авто&ldquo;</a></h4>
+                        <p class="project-card_desc">Верстка многостраничного сайта.</p>
+                    </div>
+                    
+                    <div class="project-card mix boots">
+                        <a href="#" class="project-card_img">
+                            <img src="./img/portfolio/avto-02.jpg" alt="Мир Авто">
+                            <button class="project-card_button">Смотреть проект</button>
+                        </a>
+                        <h4 class="project-card_title title title-4"><a href="#" class="project-card_link">Верстка &ldquo;Мир Авто&ldquo;</a></h4>
+                        <p class="project-card_desc">Верстка многостраничного сайта.</p>
+                    </div>
+
+                    <div class="project-card mix wp">
+                        <a href="#" class="project-card_img">
+                            <img src="./img/portfolio/avto-03.jpg" alt="Мир Авто">
+                            <button class="project-card_button">Смотреть проект</button>
+                        </a>
+                        <h4 class="project-card_title title title-4"><a href="#" class="project-card_link">Верстка &ldquo;Мир Авто&ldquo;</a></h4>
+                        <p class="project-card_desc">Верстка многостраничного сайта.</p>
+                    </div>
+
+               
+                    <!-- <div class="project-card mix frontend">
+                        <a href="#" class="project-card_img">
+                            <img src="./img/portfolio/avto-01.jpg" alt="Мир Авто">
+                            <button class="project-card_button">Смотреть проект</button>
+                        </a>
+                        <h4 class="project-card_title title title-4">Верстка &ldquo;Мир Авто&ldquo;</h4>
+                        <p class="project-card_desc">Верстка многостраничного сайта.</p>
+                    </div>
+                    
+                    <div class="project-card mix boots">
+                        <a href="#" class="project-card_img">
+                            <img src="./img/portfolio/avto-02.jpg" alt="Мир Авто">
+                            <button class="project-card_button">Смотреть проект</button>
+                        </a>
+                        <h4 class="project-card_title title title-4">Верстка &ldquo;Мир Авто&ldquo;</h4>
+                        <p class="project-card_desc">Верстка многостраничного сайта.</p>
+                    </div>
+
+                    <div class="project-card mix wp">
+                        <a href="#" class="project-card_img">
+                            <img src="./img/portfolio/avto-03.jpg" alt="Мир Авто">
+                            <button class="project-card_button">Смотреть проект</button>
+                        </a>
+                        <h4 class="project-card_title title title-4">Верстка &ldquo;Мир Авто&ldquo;</h4>
+                        <p class="project-card_desc">Верстка многостраничного сайта.</p>
+                    </div>
+
+                    <div class="project-card mix frontend">
+                        <a href="#" class="project-card_img">
+                            <img src="./img/portfolio/avto-01.jpg" alt="Мир Авто">
+                            <button class="project-card_button">Смотреть проект</button>
+                        </a>
+                        <h4 class="project-card_title title title-4">Верстка &ldquo;Мир Авто&ldquo;</h4>
+                        <p class="project-card_desc">Верстка многостраничного сайта.</p>
+                    </div>
+                    
+                    <div class="project-card mix boots">
+                        <a href="#" class="project-card_img">
+                            <img src="./img/portfolio/avto-02.jpg" alt="Мир Авто">
+                            <button class="project-card_button">Смотреть проект</button>
+                        </a>
+                        <h4 class="project-card_title title title-4">Верстка &ldquo;Мир Авто&ldquo;</h4>
+                        <p class="project-card_desc">Верстка многостраничного сайта.</p>
+                    </div>
+
+                    <div class="project-card mix wp">
+                        <a href="#" class="project-card_img">
+                            <img src="./img/portfolio/avto-03.jpg" alt="Мир Авто">
+                            <button class="project-card_button">Смотреть проект</button>
+                        </a>
+                        <h4 class="project-card_title title title-4">Верстка &ldquo;Мир Авто&ldquo;</h4>
+                        <p class="project-card_desc">Верстка многостраничного сайта.</p>
+                    </div> -->
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Плагины и библиотеки -->
+    <script src="./libs/jquery/jquery-3.5.0.min.js"></script>
+    <script src="./libs/mixitup3/mixitup.min.js"></script>
+
+    <!-- Пользовательские скрипты -->
+    <script src="./js/main.js"></script>
 
 </body>
 </html>

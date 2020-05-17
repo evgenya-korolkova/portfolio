@@ -1,0 +1,151 @@
+.portfolio {
+    padding-top: 107px;
+    padding-bottom: 60px;
+
+    background-color: #f4f8f9;
+}
+
+.portfolio-title {
+    margin-bottom: 61px;
+}
+
+.portfolio-filter {     
+    display: flex;  // убираем пробелы
+    margin-bottom: 49px;
+}
+
+.portfolio-filter_button {
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: #8fa5ae;
+    line-height: 1.2;
+
+    border: none;
+    background-color: unset;
+    padding: 0;
+
+    margin-right: 80px;
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:hover, &:active {
+        color: #ed574f;
+    }
+}
+
+.control-active {
+    color: #000;
+}
+
+.portfolio-projects{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    width: 360px;
+    margin-bottom: 64px;
+}
+
+.project-card_big {
+    width: 555px;
+}
+
+.project-card_img {
+    display: block;
+    margin-bottom: 25px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card_img::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(251, 219, 77, 0.85);
+    // display: none;
+    transform: translateY(100%);
+    transition: 0.3s;
+}
+
+.project-card_button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: #ea736d;
+    line-height: 52px;
+    padding: 0 30px;
+
+    border-radius: 26px;
+    border: 3px solid #fff;
+    background-color: #fff;
+
+    // display: none;
+    opacity: 0;
+    transition: 0.3s;
+
+    &:hover {
+        color: #fff;
+        background-color: #ea736d;
+        border-color: #ea736d;
+
+        transition: 0.5s;
+    }
+
+    &:active {
+        background-color: #d4423b;
+        border-color: #d4423b;
+    }
+}
+
+.project-card_img:hover::before {
+    // display: block;
+    transform: translateY(0%);
+    transition: 0.3s;
+}
+
+.project-card_img:hover .project-card_button {
+    // display: block;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.project-card_link {
+    border-bottom: 1px solid #f4f8f9;   // под цвет фона
+
+    &:hover {
+        color: #ed574f;
+        border-bottom-color: #ed574f;
+    }
+}
+
+.project-card_title{
+    margin-bottom: 13px;
+}
+
+.project-card_desc {
+    font-size: 20px; 
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.project-card_big .title-4 {
+    font-size: 32px;
+}
+
+.project-card_big .project-card_desc {
+    font-size: 22px;
+}

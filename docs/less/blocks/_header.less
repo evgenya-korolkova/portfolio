@@ -1,9 +1,9 @@
 .header {
     max-width: 1600px;  
     margin: 0 auto; 
-    padding-bottom: 238px; 
 
-    color: #000;
+    padding-top: 68px;
+    padding-bottom: 238px; 
 
     background-image: url("../img/header/line.jpg");
     background-repeat: repeat-y;
@@ -17,33 +17,34 @@
 
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .info-desc {
-    width: 60%;
+    width: 50%;
 }
 
 .info-photo {
     position: relative;
     z-index: 2;
 
-    width: 40%;
+    width: 50%;
+    max-width: 460px;
 
-    img {
-        max-height: 410px;
-    }
+    // img {
+    //     // max-height: 410px;
+    // }
 }
 
 .info-desc_title {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .info-desc_fi {
     position: relative;
     z-index: 2;
     font-size: 90px;
-    // font-weight: 800;
-    font-family: "Mplus 1p ExtraBold";
+    font-weight: 800;
     line-height: 1.2;
 }
 
@@ -61,15 +62,13 @@
 }
 
 .info-desc_text {
-    width: 500px;
-
-    margin-bottom: 30px;
+    // width: 500px;
+    margin-bottom: 35px;
 }
 
 .info-desc_text_p {
     font-size: 24px;
-    // font-weight: 500;
-    font-family: "Mplus 1p Medium";
+    font-weight: 500;
     line-height: 1.5;
     color: #393f47;
     text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 1);
@@ -82,7 +81,7 @@
 }
 
 .info-desc_intro {
-    margin-right: 20px;
+    margin-right: 25px;
 }
 
 .info-photo::after {
@@ -105,36 +104,41 @@
 .header-image {
     margin-top: -130px;
 
-    img {
-        max-width: unset;
-        transform: translateX(-230px);
-    }
+    // img {
+    //     max-width: unset;
+    //     transform: translateX(-230px);
+    // }
 }
 
 .header-info-2 {
     display: flex;
+    justify-content: space-between;
+
+    margin-top: -12px;
 }
 
 .info-can {
-    width: 60%;
+    width: 50%;
 }
 
 .info-contacts {
-    width: 40%;
+    width: 50%;
+    max-width: 360px;
 
-    padding-left: 97px;
+    // padding-left: 97px;
 }
 
 .info-can_title {
-    margin-bottom: 30px;
+    margin-bottom: 37px;
 }
 
 .info-can_list {
     font-size: 24px;
     line-height: 1.2;
     text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 1);
+    white-space: nowrap;
 
-    margin-bottom: 35px;
+    margin-bottom: 43px;
 }
 
 .info-can_list-item {
@@ -166,17 +170,18 @@
 }
 
 .info-contacts_title {
-    margin-bottom: 30px;
+    margin-bottom: 26px;
 }
 
 .info-contacts_list {
     display: flex;
 
     font-size: 50px;
+    margin-bottom: 16px;
 }
 
 .info-contacts_list-item {
-    margin-right: 30px;
+    margin-right: 32px;
 
     &:last-child {
         margin-right: 0;
@@ -208,7 +213,6 @@
 .info-contacts_email {
     font-size: 24px;
     line-height: 1.2;
-    // color: #000;
     border-bottom: 1px solid #000;
     text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 1);
 
