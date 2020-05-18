@@ -9,6 +9,8 @@
     background-repeat: repeat-y;
     background-size: auto;
     background-position: center;
+
+    overflow-x: hidden;
 }
 
 .header-info {
@@ -37,15 +39,16 @@
 }
 
 .info-desc_title {
+    font-size: 90px;
+    font-weight: 800;
+    line-height: 1.2;
+
     margin-bottom: 15px;
 }
 
 .info-desc_fi {
     position: relative;
     z-index: 2;
-    font-size: 90px;
-    font-weight: 800;
-    line-height: 1.2;
 }
 
 .info-desc_fi::after {
@@ -103,18 +106,14 @@
 
 .header-image {
     margin-top: -130px;
-
-    // img {
-    //     max-width: unset;
-    //     transform: translateX(-230px);
-    // }
 }
 
 .header-info-2 {
     display: flex;
     justify-content: space-between;
 
-    margin-top: -12px;
+    padding-top: 70px;
+    margin-top: -82px;
 }
 
 .info-can {
@@ -185,6 +184,12 @@
 
     &:last-child {
         margin-right: 0;
+    }
+}
+
+.info-contacts_list-item a {
+    &:hover {
+        opacity: 0.6;
     }
 }
 

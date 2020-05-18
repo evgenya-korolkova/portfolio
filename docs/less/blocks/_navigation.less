@@ -1,15 +1,24 @@
 .header-nav {
     max-width: 1400px; 
+    margin: 0 auto;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
     
-    margin: 0 auto;
     margin-bottom: 152px;
+    
+    // Медиа запрос для десктопов от 1200px
+    @media (min-width: 1200px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 
-    // padding-left: 100px;
-    // padding-right: 100px;
+    // Медиа запрос для десктопов от 1440px
+    @media (min-width: 1440px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 .nav_logo {
@@ -19,6 +28,13 @@
     font-size: 42px;
     font-weight: 900;
     line-height: 1.2;
+
+    transition: unset;
+
+    &:hover {
+        transform: rotateY(360deg); // rotateY(-90deg);
+        transition: 1.5s; //cubic-bezier(1, 0, 0, 1);
+    }
 }
 
 .nav_logo::after {
@@ -54,6 +70,7 @@
     z-index: 2;
 
     &:focus {
+        outline-offset: -3px;
         outline: 3px dotted #ea736d;
         transition: unset;
         // border: 3px dotted #ea736d;
