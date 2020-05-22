@@ -10,6 +10,10 @@ $(document).ready(function () {
             inputPlaceholder.classList.add('active');
         })
 
+        item.addEventListener('focus', function(){
+            inputPlaceholder.classList.add('active');
+        })
+
         item.addEventListener('blur', function(){
             if(this.value == ''){
                 inputPlaceholder.classList.remove('active');

@@ -29,11 +29,11 @@
     font-weight: 900;
     line-height: 1.2;
 
-    transition: 1.5s;
+    transition: 1.3s;
 
     &:hover {
         transform: rotateY(360deg);
-        transition: 1.5s; //cubic-bezier(1, 0, 0, 1);
+        transition: 1.3s;
     }
 }
 
@@ -55,19 +55,17 @@
     font-size: 20px;
     font-weight: 700;
     line-height: 1.2;
-
-    li {
-        margin-right: 75px;
-
-        &:last-child {
-            margin-right: 0;
-        }
-    }
 }
 
 .nav_list-link {
     position: relative;
     z-index: 2;
+
+    margin-right: 75px;
+
+    &:last-child {
+        margin-right: 0;
+    }    
 
     &:focus {
         outline-offset: -3px;
@@ -103,7 +101,7 @@
     font-size: 30px;
 }
 
-.nav_icons-item {
+.nav_icons-link {
     margin-right: 20px;
 
     &:last-child {

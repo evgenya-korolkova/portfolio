@@ -142,11 +142,11 @@ button {
   font-size: 42px;
   font-weight: 900;
   line-height: 1.2;
-  transition: 1.5s;
+  transition: 1.3s;
 }
 .nav_logo:hover {
   transform: rotateY(360deg);
-  transition: 1.5s;
+  transition: 1.3s;
 }
 .nav_logo::after {
   position: absolute;
@@ -164,15 +164,13 @@ button {
   font-weight: 700;
   line-height: 1.2;
 }
-.nav_list li {
-  margin-right: 75px;
-}
-.nav_list li:last-child {
-  margin-right: 0;
-}
 .nav_list-link {
   position: relative;
   z-index: 2;
+  margin-right: 75px;
+}
+.nav_list-link:last-child {
+  margin-right: 0;
 }
 .nav_list-link:focus {
   outline-offset: -3px;
@@ -199,10 +197,10 @@ button {
   display: flex;
   font-size: 30px;
 }
-.nav_icons-item {
+.nav_icons-link {
   margin-right: 20px;
 }
-.nav_icons-item:last-child {
+.nav_icons-link:last-child {
   margin-right: 0;
 }
 .nav_icons-link_linkedin:hover,
@@ -301,33 +299,33 @@ button {
   padding-top: 70px;
   margin-top: -82px;
 }
-.info-can {
+.skills {
   width: 50%;
 }
 .info-contacts {
   width: 50%;
   max-width: 360px;
 }
-.info-can_title {
+.skills_title {
   margin-bottom: 37px;
 }
-.info-can_list {
+.skills_list {
   font-size: 24px;
   line-height: 1.2;
   text-shadow: 0px 3px 42.32px #ffffff;
   white-space: nowrap;
   margin-bottom: 43px;
 }
-.info-can_list-item {
+.skills_list-item {
   position: relative;
   z-index: 2;
   padding-left: 30px;
   margin-bottom: 10px;
 }
-.info-can_list-item:last-child {
+.skills_list-item:last-child {
   margin-bottom: 0;
 }
-.info-can_list-item::after {
+.skills_list-item::after {
   position: absolute;
   z-index: -1;
   content: "";
@@ -340,18 +338,20 @@ button {
 .info-contacts_title {
   margin-bottom: 26px;
 }
-.info-contacts_list {
+.icons {
   display: flex;
   font-size: 50px;
+}
+.header .icons {
   margin-bottom: 16px;
 }
-.info-contacts_list-item {
+.icons-item {
   margin-right: 32px;
 }
-.info-contacts_list-item:last-child {
+.icons-item:last-child {
   margin-right: 0;
 }
-.info-contacts_list-item a:hover {
+.icons-item:hover {
   opacity: 0.6;
 }
 .fa-stack {
@@ -371,17 +371,17 @@ button {
 .color-facebook {
   color: #3b5998;
 }
-.info-contacts_email {
+.email {
   font-size: 24px;
   line-height: 1.2;
   border-bottom: 1px solid #000;
   text-shadow: 0px 3px 42.32px #ffffff;
 }
-.info-contacts_email:hover {
+.email:hover {
   color: #039be5;
   border-bottom: 1px solid #039be5;
 }
-.info-contacts_email:active {
+.email:active {
   color: #ea655f;
   border-bottom: 1px solid #ea655f;
 }
@@ -706,10 +706,11 @@ button {
   margin-bottom: 45px;
 }
 .contacts-form_item textarea {
-  margin-bottom: 35px;
+  margin-bottom: 40px;
 }
 .form-field {
   width: 100%;
+  display: block;
   padding-top: 13px;
   padding-bottom: 13px;
   border: none;
@@ -722,7 +723,8 @@ button {
   cursor: pointer;
 }
 .form-field:hover,
-.form-field:active {
+.form-field:active,
+.form-field:focus {
   border-bottom-color: #ed574f;
 }
 textarea.form-field {
