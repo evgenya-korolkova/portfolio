@@ -54,24 +54,31 @@ button {
 }
 
 .container {
-    max-width: 1140px;
+    // max-width: 1140px;
     margin: 0 auto;
 
-    // padding: 0 15px;
+    padding: 0 15px;
 
-    // // Медиа запрос для планшетов
-    // @media (min-width: 768px) {
-    //     padding: 0 30px;
-    // }
+    max-width: 420px;
 
-    // // Медиа запрос для десктопов
-    // @media (min-width: 1200px) {
-    //     padding: 0;
-    // }
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        padding: 0 30px;
+        max-width: 1140px;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        padding: 0;
+    }
 }
 
 .none {
     display: none;
+}
+
+.none-scroll {
+    overflow: hidden;
 }
 
 .title-2 {
@@ -81,10 +88,20 @@ button {
 }
 
 .title-3 {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 800;
     line-height: 1.2;
     text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 1);
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        font-size: 32px;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 40px;
+    }
 }
 
 .title-4 {
@@ -151,5 +168,20 @@ button {
 
 .button-link_wrapper {
     display: flex;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    display: none;
+}
+
+#overlay.active {
+    display: block;
 }
 

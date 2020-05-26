@@ -2,15 +2,26 @@
     max-width: 1600px;  
     margin: 0 auto; 
 
-    padding-top: 68px;
-    padding-bottom: 238px; 
-
-    background-image: url("../img/header/line.jpg");
-    background-repeat: repeat-y;
-    background-size: auto;
-    background-position: center;
+    padding-top: 30px;
+    padding-bottom: 100px; 
 
     overflow-x: hidden;
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        padding-bottom: 80px; 
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        padding-top: 68px;
+        padding-bottom: 238px; 
+
+        background-image: url("../img/header/line.jpg");
+        background-repeat: repeat;
+        background-size: contain;   //auto;
+        background-position: center;
+    }
 }
 
 .header-info {
@@ -18,32 +29,78 @@
     z-index: 2;         // картинка с ноутбуком
 
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+    }
 }
 
 .info-desc {
-    width: 50%;
+    width: 100%;
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        width: calc( ~"50% - 15px" );
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        width: 50%;
+    }
 }
 
 .info-photo {
     position: relative;
     z-index: 2;
 
-    width: 50%;
-    max-width: 460px;
+    width: 100%;
+    margin-bottom: 50px;
 
-    // img {
-    //     // max-height: 410px;
-    // }
+    max-width: 330px;
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        width: calc( ~"50% - 15px" );
+        padding: 0 25px;
+        margin-bottom: 0;
+
+        max-width: 420px;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        width: 50%;
+        padding: 0;
+        max-width: 460px;
+    }
 }
 
 .info-desc_title {
-    font-size: 90px;
+    font-size: 42px;
     font-weight: 800;
     line-height: 1.2;
 
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        font-size: 52px;
+        margin-bottom: 17px;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 90px;
+        margin-bottom: 15px;
+    }
 }
 
 .info-desc_fi {
@@ -59,27 +116,59 @@
     height: 12px;
 
     background-color: #fbdc4d;
-    bottom: 23px;
+    bottom: 8px;
     left: -5px;
     right: -5px;
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        bottom: 12px;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        bottom: 23px;
+    }
 }
 
 .info-desc_text {
     // width: 500px;
-    margin-bottom: 35px;
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        margin-bottom: 35px;;
+    }
 }
 
 .info-desc_text_p {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 500;
-    line-height: 1.5;
+    line-height: 1.667;
     color: #393f47;
     text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 1);
 
-    margin-bottom: 10px;
+    // margin-bottom: 10px;
+    // &:last-child {
+    //     margin-bottom: 0;
+    // }
 
-    &:last-child {
-        margin-bottom: 0;
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 24px;
+        line-height: 1.5;
+    }
+}
+
+.button-link_wrapper {
+    display: none;
+
+     // Медиа запрос для десктопов
+     @media (min-width: 1200px) {
+        display: block;
     }
 }
 
@@ -102,54 +191,165 @@
     background-image: linear-gradient(180deg, rgba(244, 248, 249, 0), rgba(244, 248, 249, 1));
     // background-image: linear-gradient(180deg, rgba(244, 248, 249, 0), rgba(61, 163, 189, 1));
     opacity: 0.5;
+
+    display: none;
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        display: block;
+    }
 }
 
 .header-image {
-    margin-top: -130px;
+    margin-top: 32px;
+    margin-bottom: 80px;
+
+    transform: scale(1.78);
+
+    // доп. Медиа запрос от 470
+     @media (min-width: 470px) {
+        margin-top: 12px;
+        transform: scale(1.54);
+    }
+
+    // доп. Медиа запрос от 620
+    @media (min-width: 620px) {
+        margin-top: -8px;
+        transform: scale(1.27);
+    }
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        margin-top: -29px;
+        transform: scale(1);
+        margin-bottom: 12px;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        margin-top: -130px;
+        margin-bottom: 0;
+
+        .image-line {
+            display: block;
+        }
+
+        .image {
+            display: none;
+        }
+    }
 }
 
 .header-info-2 {
-    display: flex;
-    justify-content: space-between;
+    position: relative; // чтобы не наезжала 
+    z-index: 2;         // картинка с ноутбуком
 
-    padding-top: 70px;
-    margin-top: -82px;
+    display: flex;
+    flex-direction: column;
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        padding-top: 70px;
+        margin-top: -85px;
+    }
 }
 
 .skills {
-    width: 50%;
+    width: 100%;
+    margin-bottom: 39px;
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        width: calc( ~"50% - 15px" );
+        margin-bottom: 0;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        width: 50%;
+    }
 }
 
 .info-contacts {
-    width: 50%;
-    max-width: 360px;
+    width: 100%;
 
-    // padding-left: 97px;
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        width: calc( ~"50% - 15px" );
+        max-width: 360px;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        width: 50%;
+        max-width: 360px;
+    }
 }
 
 .skills_title {
-    margin-bottom: 37px;
+    margin-bottom: 30px;
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        margin-bottom: 30px;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        margin-bottom: 37px;
+    }
 }
 
 .skills_list {
-    font-size: 24px;
+    font-size: 18px;
     line-height: 1.2;
     text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 1);
-    white-space: nowrap;
 
-    margin-bottom: 43px;
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 24px;
+        white-space: nowrap;
+
+        margin-bottom: 43px;
+    }
 }
 
 .skills_list-item {
     position: relative;
     z-index: 2;
 
-    padding-left: 30px;
-
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 
     &:last-child {
         margin-bottom: 0;
+    }
+
+    &::first-letter {
+        text-transform: uppercase;
+    }
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        padding-left: 30px;
+        margin-bottom: 10px;
+
+        &::first-letter {
+            text-transform: none;
+        }
     }
 }
 
@@ -157,7 +357,7 @@
     position: absolute;
     z-index: -1;
 
-    content: "";
+    // content: "";
 
     width: 24px;
     height: 1px;
@@ -166,24 +366,55 @@
     top: 50%;
 
     background-color: #000;
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        content: "";
+    }
+}
+
+.skills_works {
+    display: none;
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        display: inline-block;
+    }
 }
 
 .info-contacts_title {
-    margin-bottom: 26px;
+    margin-bottom: 11px;
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        margin-bottom: 26px;
+    }
 }
 
 .icons {
     display: flex;
-
     font-size: 50px;
 }
 
 .header .icons {
-    margin-bottom: 16px;
+    margin-bottom: 4px;
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        margin-bottom: 12px;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        margin-bottom: 16px;
+    }
 }
 
 .icons-item {
-    margin-right: 32px;
+    margin-right: 30px;
 
     &:last-child {
         margin-right: 0;
@@ -191,6 +422,16 @@
 
     &:hover {
         opacity: 0.6;
+    }
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        margin-right: 32px;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        // margin-right: 32px;
     }
 }
 
@@ -217,7 +458,7 @@
 }
 
 .email {
-    font-size: 24px;
+    font-size: 18px;
     line-height: 1.2;
     border-bottom: 1px solid #000;
     text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 1);
@@ -231,5 +472,17 @@
         color: #ea655f;
         border-bottom: 1px solid #ea655f;
     }
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        font-size: 20px;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 24px;
+    }
 }
+
+
 

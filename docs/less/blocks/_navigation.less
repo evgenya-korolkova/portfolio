@@ -6,18 +6,28 @@
     justify-content: space-between;
     align-items: center;
     
-    margin-bottom: 152px;
+    padding-left: 15px;
+    padding-right: 35px;
+    
+    margin-bottom: 35px;
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        padding-left: 30px;
+        padding-right: 50px;
+
+        margin-bottom: 87px;
+    }
     
     // Медиа запрос для десктопов от 1200px
     @media (min-width: 1200px) {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: 0 20px;
+        margin-bottom: 156px;
     }
 
     // Медиа запрос для десктопов от 1440px
     @media (min-width: 1440px) {
-        padding-left: 0;
-        padding-right: 0;
+        padding: 0;
     }
 }
 
@@ -27,7 +37,7 @@
 
     font-size: 42px;
     font-weight: 900;
-    line-height: 1.2;
+    line-height: 1;
 
     transition: 1.3s;
 
@@ -45,34 +55,115 @@
     height: 10px;
 
     background-color: #fbdc4d;
-    bottom: 5px;
+    bottom: 1px;
     left: -5px;
     right: -5px;
 }
 
+.nav_list .nav_logo {
+    margin-bottom: 38px;
+}
+
 .nav_list {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 10;
+
     display: flex;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.2;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 30px 30px 0;
+
+    width: 100%;
+    max-width: 320px;
+
+    transform: translateX(100%);    //скрыть меню
+    transition: 0.5s;
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        position: relative;
+        max-width: unset;
+        width: auto;
+        display: block;
+        padding: 0;
+        background-color: transparent;
+
+        transform: translateX(0); // отобразить меню
+    }
+}
+
+.nav_list.active {
+    transform: translateX(0); // отобразить меню
+
+    .nav_logo, .nav_list_icons-email { 
+        display: block;     // отобразить другие блоки в меню
+    }
+}
+
+.nav_list-link-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin-bottom: 31px;
+
+    @media (min-width: 1200px) {
+        display: block;
+        margin-bottom: 0;
+    }
 }
 
 .nav_list-link {
     position: relative;
     z-index: 2;
 
-    margin-right: 75px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    border-bottom: 1px solid #000;
+
+    margin-bottom: 27px;
 
     &:last-child {
-        margin-right: 0;
+        margin-bottom: 0;
     }    
 
-    &:focus {
-        outline-offset: -3px;
-        outline: 3px dotted #ea736d;
-        transition: unset;
-        // border: 3px dotted #ea736d;
-        // outline: none;
+    // &:focus {
+    //     outline-offset: -3px;
+    //     outline: 3px dotted #ea736d;
+    //     transition: unset;
+    //     // border: 3px dotted #ea736d;
+    //     // outline: none;
+    // }
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        margin-bottom: 0;
+        margin-right: 75px;
+        
+        outline: none;
+        border:3px dotted transparent;  // rgba(234, 115, 109, 0);
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:focus {
+            border-color: #ea736d;
+        }
     }
 }
 
@@ -81,7 +172,8 @@
     z-index: -1;
 
     content: "";
-    height: 6px;
+    height: 0px;
+    // height: 6px;
     width: 0;
 
     background-color: #fbdc4d;
@@ -89,16 +181,28 @@
     left: -5px;
 
     transition: 0.5s;
+
+    @media (min-width: 1200px) {
+        height: 6px;
+    }
 }
 
 .nav_list-link:hover::after, .nav_list-link:active::after, .nav_list-link_active::after {
     width: 110%;
 }
 
-.nav_icons {
-    display: flex;
+.nav_list-link:hover, .nav_list-link:active {
+    border-color: transparent;
+}
 
-    font-size: 30px;
+.nav_icons {
+    display: none;
+    
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 30px;
+        display: flex;
+    }
 }
 
 .nav_icons-link {
@@ -125,4 +229,108 @@
     &:hover, &:active {
         color: #45668e;
     }
+}
+
+.toggle-menu {
+    cursor: pointer;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    // z-index: 15;
+    z-index: 7;
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+    }
+    
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        display: none;
+    }
+}
+
+.toggle-menu span {
+    display: block;
+    width: 40px;
+    height: 5px;
+    background-color: #000;
+    position: relative;
+
+    &::before, &::after {
+        position: absolute;
+        content: "";
+        width: 40px;
+        height: 5px;
+        left: 0;
+        background-color: #000;
+    }
+    &::before {
+        top: -10px;
+    }
+    &::after {
+        bottom: -10px;
+    }
+}
+
+.toggle-menu.active {
+    z-index: 15;
+    // прижать к правому краю
+    transform: translateX(10px);
+
+    span {
+        background-color: transparent;
+    
+        &::before {
+            transform: rotate(45deg);
+            top: 0;
+        }
+        &::after {
+            transform: rotate(-45deg);
+            bottom: 0;
+        }
+    }
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        transform: translateX(25px); 
+    }
+}
+
+.nav_list_icons {
+    display: flex;
+    font-size: 50px;
+    margin-bottom: 22px;
+}
+
+.nav_list_icons-item {
+    margin-right: 20px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+.nav_list_email {
+    font-size: 18px;
+    color: #039be5;
+    border-bottom: 1px solid #039be5;
+
+    transition: 0.25s;
+
+    &:hover, &:active {
+        border-color: transparent;
+
+        transition: 0.25s;
+    }
+}
+
+.nav_list.active .nav_list-link, .nav_list.active .nav_list-link:hover {
+    transition: 0.25s;
 }

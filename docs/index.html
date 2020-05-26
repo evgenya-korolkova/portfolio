@@ -15,19 +15,48 @@
 </head>
 <body>
 
+    <div id="overlay"></div>
+
     <header class="header">
 
         <nav class="header-nav">
 
             <a href="./index.html" class="nav_logo">EK</a>
 
-             <div class="nav_list">
-                <a href="#" class="nav_list-link nav_list-link_active">Главная</a>
-                <a href="#" class="nav_list-link">Работы</a>
-                <a href="#" class="nav_list-link">Контакты</a>
+             <div class="nav_list"> <!-- Меню -->
+
+                <a href="./index.html" class="nav_logo none">EK</a>
+
+                <div class="nav_list-link-wrapper">
+                    <a href="#" class="nav_list-link nav_list-link_active">Главная</a>
+                    <a href="#" class="nav_list-link">Работы</a>
+                    <a href="#" class="nav_list-link">Контакты</a>
+                </div>
+
+                <div class="nav_list_icons-email none">
+                    <div class="nav_list_icons">
+                        <a href="#" class="nav_list_icons-item color-github"><i class="fab fa-github"></i></a>
+                        <a href="#" class="nav_list_icons-item color-telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="nav_list_icons-item color-vk">
+                            <span class="fa-stack">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-vk fa-stack-1x fa-inverse" style="font-size: 1.2em;"></i>
+                            </span>
+                        </a>
+                        <a href="#" class="nav_list_icons-item color-facebook">
+                            <span class="fa-stack">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </div>   
+                    
+                    <a href="mailto:evgenyakorolkova@mail.ru" class="nav_list_email">evgenyakorolkova@mail.ru</a>
+                </div>
+
             </div>
 
-            <div class="nav_icons">
+            <div class="nav_icons"> <!-- nav header-social -->
                 <a href="#" class="nav_icons-link nav_icons-link_linkedin">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
@@ -38,6 +67,8 @@
                     <i class="fab fa-vk"></i>
                 </a>
             </div>
+
+            <div class="toggle-menu"><span></span></div>
         </nav>
 
         <div class="container">
@@ -45,13 +76,20 @@
             <!-- header-info -->
             <div class="header-info">
 
+                 <!-- info-photo -->
+                 <div class="info-photo">
+                    <img src="./img/header/info.jpg" alt="Мое фото">
+
+                </div>
+                <!-- // info-photo -->
+
                 <!-- info-desc -->
                 <div class="info-desc">
 
                     <h1 class="info-desc_title"><span class="info-desc_fi">Евгения</span><br><span class="info-desc_fi">Королькова</span></h1>
 
                     <div class="info-desc_text">
-                        <p class="info-desc_text_p">Верстальщик сайтов, веб-разработчик. Оперативная&nbsp;верстка. Работаю с&nbsp;соблюдением сроков и выполнением ТЗ. </p>
+                        <p class="info-desc_text_p">Верстальщик сайтов, веб&#8209;разработчик. Оперативная&nbsp;верстка. Работаю с&nbsp;соблюдением сроков и выполнением&nbsp;ТЗ.</p>
                     </div>
 
                     <div class="button-link_wrapper">
@@ -61,19 +99,13 @@
                 </div>
                 <!-- // info-desc -->
 
-                <!-- info-photo -->
-                <div class="info-photo">
-                    <img src="./img/header/info.jpg" alt="Мое фото">
-
-                </div>
-                <!-- // info-photo -->
-
             </div>
             <!-- // header-info -->
         </div>
 
         <div class="header-image">
-            <img src="./img/header/header.jpg" alt="notebook">
+            <img src="./img/header/header-line.jpg" alt="notebook" class="image-line none">
+            <img src="./img/header/header.jpg" alt="notebook" class="image">
         </div>
 
         <div class="container">
@@ -123,7 +155,7 @@
     </header>
 
     <main>
-        <section class="portfolio" id="portfolio">
+        <section class="portfolio none" id="portfolio">
             <div class="container">
 
                 <div class="portfolio-title title-2"><span class="underline">Портфолио</span></div>
@@ -177,7 +209,7 @@
             </div>
         </section>
 
-        <section class="timeline">
+        <section class="timeline none">
             <div class="container">
 
                 <h2 class="timeline-title title-2"><span class="underline">Как я работаю</span></h2>
@@ -248,7 +280,7 @@
             </div>
         </section>
 
-        <section class="contacts" id="contacts">
+        <section class="contacts none" id="contacts">
             <div class="container">
 
                 <h2 class="contacts-title title-2"><span class="underline">Контакты</span></h2>
@@ -330,7 +362,7 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer none">
         <div class="container">
 
             <div class="footer_copyright">&copy; 2020 — Евгения Королькова</div>
