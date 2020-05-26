@@ -54,12 +54,13 @@ button {
 @media (min-width: 768px) {
   .container {
     padding: 0 30px;
-    max-width: 1140px;
+    max-width: 900px;
   }
 }
 @media (min-width: 1200px) {
   .container {
     padding: 0;
+    max-width: 1140px;
   }
 }
 .none {
@@ -476,7 +477,7 @@ button {
     width: calc(50% - 15px);
     padding: 0 25px;
     margin-bottom: 0;
-    max-width: 420px;
+    max-width: unset;
   }
 }
 @media (min-width: 1200px) {
