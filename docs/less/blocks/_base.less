@@ -80,9 +80,18 @@ button {
 }
 
 .title-2 {
-    font-size: 64px;
+    font-size: 42px;
     font-weight: 800;
     line-height: 1.2;
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        font-size: 52px;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 64px;
+    }
 }
 
 .title-3 {
@@ -103,9 +112,20 @@ button {
 }
 
 .title-4 {
-    font-size: 26px;
+    // font-size: 26px;
+    font-size: 22px;
     font-weight: 700;
     line-height: 1.2;
+    
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        font-size: 24px;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 32px;
+    }
 }
 
 .underline {
@@ -121,9 +141,18 @@ button {
     height: 12px;
 
     background-color: #fbdc4d;
-    bottom: 15px;
+    bottom: 8px;
     left: -5px;
     right: -5px;
+
+    @media (min-width: 768px) {
+        bottom: 12px;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        bottom: 15px;
+    }
 }
 
 .button-link {

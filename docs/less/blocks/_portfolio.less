@@ -1,12 +1,41 @@
 .portfolio {
-    padding-top: 105px;
-    padding-bottom: 60px;
+    padding-top: 51px;
+    padding-bottom: 95px;
 
     background-color: #f4f8f9;
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        padding-top: 72px;
+        padding-bottom: 80px;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        padding-top: 105px;
+        padding-bottom: 60px;
+    }
 }
 
 .portfolio-title {
-    margin-bottom: 61px;
+    margin-bottom: 46px;
+    text-align: center;
+
+    // доп. Медиа запрос от 530px
+    @media (min-width: 530px) {
+        text-align: left;
+    }
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        margin-bottom: 40px;
+        text-align: left;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        margin-bottom: 42px;
+    }
 }
 
 .portfolio-filter {     
@@ -41,26 +70,89 @@
 
 .portfolio-projects{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
+
+    margin-bottom: -5px;
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        justify-content: space-between;
+        margin-bottom: -8px;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        margin-bottom: 0;
+    }
 }
 
 .project-card {
-    width: 360px;
-    margin-bottom: 64px;
-}
+    width: 290px;
+    // width: 100%;
+    // max-width: 338px;
 
-.project-card_big {
-    width: 555px;
+    margin-bottom: 45px;
+
+    // доп. Медиа запрос от 530px
+    @media (min-width: 530px) {
+        width: 390px;
+    }
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        width: 338px;
+        margin-bottom: 44px;
+    }
+
+    // доп. Медиа запрос от 820px
+    @media (min-width: 820px) {
+        width: 365px;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        width: 555px;
+        margin-bottom: 64px;
+    }
 }
 
 .project-card_img {
     display: block;
-    margin-bottom: 25px;
+    height: 200px;
+
+    margin-bottom: 21px;
 
     position: relative;
     overflow: hidden;
+
+    img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    // доп. Медиа запрос от 530px
+    @media (min-width: 530px) {
+        height: 269px;
+    }
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        height: 240px;
+        margin-bottom: 20px;
+    }
+
+    // доп. Медиа запрос от 820px
+    @media (min-width: 820px) {
+        height: 260px;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        height: 370px;
+        margin-bottom: 25px;
+    }
 }
 
 .project-card_img::before {
@@ -83,7 +175,7 @@
     transform: translate(-50%, -50%);
 
     font-family: 'M PLUS 1p', sans-serif;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 800;
     color: #ea736d;
     line-height: 52px;
@@ -96,6 +188,16 @@
     // display: none;
     opacity: 0;
     transition: 0.3s;
+
+     // Медиа запрос для планшетов
+     @media (min-width: 768px) {
+        font-size: 18px;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 22px;
+    }
 
     &:hover {
         color: #fff;
@@ -133,19 +235,71 @@
 }
 
 .project-card_title{
-    margin-bottom: 13px;
+    margin-bottom: 12px;
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        margin-bottom: 13px
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        margin-bottom: 13px
+    }
 }
 
 .project-card_desc {
-    font-size: 20px; 
+    // font-size: 20px; 
+    font-size: 16px;
     font-weight: 300;
     line-height: 1.2;
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        font-size: 18px;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 22px;
+    }
 }
 
-.project-card_big .title-4 {
-    font-size: 32px;
+.portfolio_all-projects {
+    padding-left: calc( ~"(100% - 290px) / 2" );
+
+    // доп. Медиа запрос от 530px
+     @media (min-width: 530px) {
+        padding-left: 0;
+        // text-align: left;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        display: none;
+    }
 }
 
-.project-card_big .project-card_desc {
-    font-size: 22px;
+.portfolio_all-projects_link {
+    font-size: 20px;
+    color: #039be5;
+    text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 1);
+    border-bottom: 1px solid #039be5;
+    text-align: center;
+
+    &:hover {
+        border-bottom-color: transparent;
+    }
 }
+
+// .project-card_big {
+//     width: 555px;
+// }
+
+// .project-card_big .title-4 {
+//     font-size: 32px;
+// }
+
+// .project-card_big .project-card_desc {
+//     font-size: 22px;
+// }
