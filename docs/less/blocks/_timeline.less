@@ -1,25 +1,74 @@
 .timeline {
-    padding-top: 137px;
-    padding-bottom: 85px; 
+    padding-top: 55px;
+    padding-bottom: 60px; 
 
-    background-image: url("../img/timeline/line.jpg");
-    background-repeat: repeat-y;
-    background-size: auto;
-    background-position: center;
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        padding-top: 137px;
+        padding-bottom: 85px;
+
+        background-image: url("../img/timeline/line.jpg");
+        background-repeat: repeat-y;
+        background-size: auto;
+        background-position: center;
+    }
 }
 
 .timeline-title {
+    font-size: 36px;
     text-align: center;
-    margin-bottom: 155px;
+    white-space: nowrap;
+
+    margin-bottom: 50px;
+
+    // Медиа запрос для планшетов
+     @media (min-width: 768px) {
+        font-size: 52px;
+        margin-bottom: 160px;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 64px;
+        margin-bottom: 155px;
+    }
+}
+
+.timeline .underline::after {
+    bottom: 6px;
+
+    @media (min-width: 768px) {
+        bottom: 12px;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        bottom: 15px;
+    }
 }
 
 .timeline-container {
-    max-width: 1005px;
-    margin: 0 auto;
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        max-width: 706px;
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        max-width: 1005px;
+    }
 }
 
 .timeline-item {
@@ -27,8 +76,8 @@
 
     display: flex;
 
-    width: 540px;
-    padding-bottom: 64px;
+    width: 100%;
+    padding-bottom: 49px;
     margin-bottom: 20px;
 
     text-align: left;
@@ -37,24 +86,42 @@
         margin-bottom: 0;
     }
 
-    &:nth-child(odd) {
-        align-self: flex-start;
-        flex-direction: row-reverse;
-        text-align: right;
+    &:last-child::before {  // убираем последнюю полоску
+        width: 0;
+    }
 
-        .timeline-item-desc {
-            padding-left: 0;
-            padding-right: 45px;
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        width: 390px;
+        padding-bottom: 50px;
+
+        &:nth-child(odd) {
+            align-self: flex-start;
+            flex-direction: row-reverse;
+            text-align: right;
+
+            .timeline-item-desc {
+                padding-left: 0;
+                padding-right: 30px;
+            }
+        }
+
+        &:nth-child(odd)::before {
+            right: 35px;
+            left: auto;
         }
     }
 
-    &:nth-child(odd)::before {
-        right: 35px;
-        left: auto;
-    }
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        width: 540px;
+        padding-bottom: 64px;
 
-    &:last-child::before {  // убираем последнюю полоску
-        width: 0;
+        &:nth-child(odd) {
+            .timeline-item-desc {
+                padding-right: 45px;
+            }
+        }
     }
 }
 
@@ -71,7 +138,6 @@
 }
 
 .timeline-item:first-child::after {
-    content: "";
     position: absolute;
 
     width: 4px;
@@ -80,6 +146,11 @@
     right: 35px;
     top: -77px;
     background-color: rgb(225, 238, 244);
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        content: "";
+    }
 }
 
 .timeline-item-img {
@@ -96,25 +167,63 @@
 }
 
 .timeline-item-desc {
-    padding-left: 45px;
-    padding-top: 21px;
+    padding-left: 25px;
+    padding-top: 4px;
 
     cursor: pointer;
 
     &:hover {
         .timeline-item-desc_title {
+
+            color: #ed574f;
+            transition: 0.5s;
+
             .title_underline::after {
                 background-color: #ea736d;
 
-                transition: 0.5s;
+                // transition: 0.5s;
+            }
+        }
+    }
+
+    // Медиа запрос для планшетов
+     @media (min-width: 768px) {
+        padding-left: 30px;
+        padding-top: 21px;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        padding-left: 45px;
+
+        &:hover {
+            .timeline-item-desc_title {
+                color: #000;
             }
         }
     }
 }
 
 .timeline-item-desc_title {
+    font-size: 20px;
     font-weight: 800;
-    margin-bottom: 11px;
+    line-height: 1.2;
+
+    margin-bottom: 8px;
+
+    transition: 0.5s;
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 26px;
+        margin-bottom: 11px;
+    }
 }
 
 .title_underline {
@@ -126,7 +235,7 @@
     position: absolute;
     z-index: -1;
 
-    content: "";
+    // content: "";
     height: 7px;
 
     background-color: #fbdc4d;
@@ -135,17 +244,46 @@
     right: -5px;
 
     transition: 0.5s;
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        content: "";
+    }
 }
 
 .timeline-item-desc_text {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
-    line-height: 1.2;
-    margin-bottom: 13px;
+    line-height: 1.43;
+    margin-bottom: 7px;
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        font-size: 16px;
+        line-height: 1.375;
+        margin-bottom: 10px;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 18px;
+        line-height: 1.2;
+        margin-bottom: 13px;
+    }
 }
 
 .timeline-item-desc_time {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 700;
     line-height: 1.2;
+
+    // Медиа запрос для планшетов
+    @media (min-width: 768px) {
+        font-size: 18px;
+    }
+
+    // Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 18px;
+    }
 }
