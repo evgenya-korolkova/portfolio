@@ -285,7 +285,7 @@
             </div>
         </section>
 
-        <section class="contacts none" id="contacts">
+        <section class="contacts" id="contacts">
             <div class="container">
 
                 <h2 class="contacts-title title-2"><span class="underline">Контакты</span></h2>
@@ -294,7 +294,7 @@
 
                     <div class="contacts-info">
                         <p class="contacts-info_text">
-                            Если вы ищите специалиста по верстке сайтов, front&#8209;end разработчика в команду или для работы над проектом —  напишите мне.
+                            Если вы ищите специалиста по&nbsp;верстке сайтов, front&#8209;end разработчика в&nbsp;команду или для&nbsp;работы над&nbsp;проектом&nbsp;— напишите мне.
                         </p>
 
                         <div class="contacts-info-wrapper">
@@ -340,40 +340,49 @@
 
                     </div>
 
-                    <form class="contacts-form">
+                    <div class="contacts-form_wrapper">
+                        <form class="contacts-form" action="" id="contact-form">
 
-                        <div class="contacts-form_item">
-                            <input type="text" name="email" class="form-field form-field_email">
-                            <span class="fake-placeholder">Ваш Email</span>
-                        </div>
+                            <input type="hidden" name="project_name" value ="myportfolio.ru">
+                            <input type="hidden" name="admin_email" value ="evgenyakorolkova@mail.ru">
+                            <input type="hidden" name="email_from" value ="info@myportfolio.ru">
 
-                        <div class="contacts-form_item">
-                            <input type="text" name="theme" class="form-field form-field_theme">
-                            <span class="fake-placeholder">Тема письма</span>
-                        </div>
+                            <div class="contacts-form_item form_item_email">
+                                <input type="text" name="email" class="form-field">
+                                <span class="fake-placeholder">Ваш Email</span>
+                            </div>
 
-                        <div class="contacts-form_item">
-                            <textarea name="message" rows="3" class="form-field"></textarea>
-                            <span class="fake-placeholder">Сообщение</span>
-                        </div>
+                            <div class="contacts-form_item form_item_theme">
+                                <input type="text" name="theme" class="form-field">
+                                <span class="fake-placeholder">Тема письма</span>
+                            </div>
 
-                        <div class="contacts-form_button">
-                            <input type="submit" value="Отправить" class="button-link button-link_yellow">
-                        </div>
+                            <div class="contacts-form_item form_item_message">
+                                <textarea name="message" rows="3" class="form-field"></textarea>
+                                <span class="fake-placeholder">Сообщение</span>
+                            </div>
 
-                    </form>
+                            <div class="contacts-form_button">
+                                <input type="submit" value="Отправить" class="button-link button-link_yellow">
+                            </div>
+
+                        </form>
+
+                        <div id="answer"></div>
+                    </div>
+
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer none">
+    <footer class="footer">
         <div class="container">
 
             <div class="footer_copyright">&copy; 2020 — Евгения Королькова</div>
 
             <div class="footer_text">
-                <p>Веб-разработик из Рязани, занимаюсь версткой и созданием сайтов.</p>
+                <p>Веб-разработчик из Рязани, занимаюсь версткой и созданием сайтов.</p>
                 <p>Этот сайт сделал в рамках прохождения обучения по верстке на курсах от <a href="https://webcademy.ru/" target="_blank" class="footer_text_link">WebCademy.ru</a></p>
             </div>
 
@@ -383,6 +392,7 @@
     <!-- Плагины и библиотеки -->
     <script src="./libs/jquery/jquery-3.5.0.min.js"></script>
     <script src="./libs/mixitup3/mixitup.min.js"></script>
+    <script src="./libs/jquery.validate/jquery.validate.js"></script>
 
     <!-- Пользовательские скрипты -->
     <script src="./js/main.js"></script>

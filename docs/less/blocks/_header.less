@@ -344,7 +344,7 @@
 
     // Медиа запрос для десктопов
     @media (min-width: 1200px) {
-        padding-left: 30px;
+        // padding-left: 30px;
         margin-bottom: 10px;
 
         &::first-letter {
@@ -353,23 +353,22 @@
     }
 }
 
-.skills_list-item::after {
-    position: absolute;
-    z-index: -1;
+.skills_list-item::before {
+    // position: absolute;
+    // z-index: -1;
 
-    // content: "";
+    // width: 24px;
+    // height: 1px;
 
-    width: 24px;
-    height: 1px;
+    // left: 0;
+    // top: 50%;
 
-    left: 0;
-    top: 50%;
-
-    background-color: #000;
+    // background-color: #000;
 
     // Медиа запрос для десктопов
     @media (min-width: 1200px) {
-        content: "";
+        content: '\2014';    // '—' длинное тире
+        padding-right: 8px;
     }
 }
 
